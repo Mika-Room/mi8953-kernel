@@ -2574,6 +2574,9 @@ static int mdss_fb_mmap(struct fb_info *info, struct vm_area_struct *vma)
 
 static struct fb_ops mdss_fb_ops = {
 	.owner = THIS_MODULE,
+	.fb_fillrect = sys_fillrect,
+	.fb_copyarea = sys_copyarea,
+	.fb_imageblit = sys_imageblit,
 	.fb_open = mdss_fb_open,
 	.fb_release = mdss_fb_release,
 	.fb_check_var = mdss_fb_check_var,	/* vinfo check */

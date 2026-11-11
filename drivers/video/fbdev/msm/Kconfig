@@ -30,6 +30,9 @@ config FB_MSM_MDSS
 	bool "MDSS HW"
 	select SYNC_FILE
 	select FB_MSM_MDSS_COMMON
+	select FB_SYS_FILLRECT
+	select FB_SYS_COPYAREA
+	select FB_SYS_IMAGEBLIT
 	help
 	The Mobile Display Sub System (MDSS) driver supports devices which
 	contain MDSS hardware block.

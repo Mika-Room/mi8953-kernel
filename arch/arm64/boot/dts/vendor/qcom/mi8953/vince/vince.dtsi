@@ -10,3 +10,8 @@
 #include "fingerprint.dtsi"
 #include "pmic.dtsi"
 #include "battery.dtsi"
+
+&msm_gpu {
+	qcom,enable-midframe-timer;
+	qcom,ca-busy-penalty = <8000>;
+};
